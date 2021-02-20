@@ -8,12 +8,14 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
+import com.bumptech.glide.load.resource.bitmap.FitCenter;
 import com.codepath.apps.restclienttemplate.models.Tweet;
 
 import java.util.List;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
+import jp.wasabeef.glide.transformations.RoundedCornersTransformation;
 
 public class TweetAdapter extends RecyclerView.Adapter<TweetAdapter.ViewHolder> {
 
@@ -87,8 +89,13 @@ public class TweetAdapter extends RecyclerView.Adapter<TweetAdapter.ViewHolder> 
             tvTimestamp.setText(tweet.getFormattedTimestamp());
             tvName.setText(tweet.user.name);
             tvDot.setText(".");
+
+            // For Rounded Corners
+            int radius = 10; // corner radius, higher value = more rounded
+            int margin = 0; // crop margin, set to 0 for corners with no crop
             Glide.with(context)
                     .load(tweet.user.profileImageUrl)
+                    .transform(new FitCenter(), new RoundedCornersTransformation(radius, margin))
                     .into(ivProfile);
         }
     }

@@ -61,7 +61,16 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_marginStart="5dp"
-        android:layout_marginTop="-5dp"
+        android:layout_marginTop="-10dp"
         android:layout_toEndOf="@+id/tvScreenName"
+        android:textSize="20sp"
         tools:text="." />
+
+    <View
+        style="@style/Divider"
+        android:layout_below="@+id/tvBody"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        />
+
 </RelativeLayout>
