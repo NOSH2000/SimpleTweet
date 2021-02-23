@@ -36,6 +36,4 @@
         <!-- Support library compatibility -->
         <item name="background">@color/twitter_blue</item>
     </style>
-
-
 </resources>

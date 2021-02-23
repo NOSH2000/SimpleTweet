@@ -61,4 +61,7 @@ dependencies {
 
     implementation "androidx.vectordrawable:vectordrawable:1.0.0" // VectorDrawableCompat
     implementation "androidx.vectordrawable:vectordrawable-animated:1.0.0" // AnimatedVectorDrawableCompa
+
+    // See https://developer.android.com/jetpack/androidx/releases/appcompat
+//    implementation 'androidx.appcompat:appcompat-1.0.2'
 }
