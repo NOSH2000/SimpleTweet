@@ -27,9 +27,13 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_below="@+id/etCompose"
-        android:layout_marginEnd="5dp"
+        android:layout_marginEnd="15dp"
         android:layout_marginTop="5dp"
-        android:text="@string/tweet" />
+        android:text="@string/tweet"
+        android:background="@color/twitter_blue"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textSize="14sp" />
 
     <TextView
         android:id="@+id/tvMaxCount"
@@ -39,6 +43,8 @@
         android:layout_marginEnd="7dp"
         android:layout_marginTop="20dp"
         android:layout_toStartOf="@+id/btnTweet"
+        android:textStyle="bold"
+        android:textSize="16sp"
         android:text="/280" />
 
     <TextView
@@ -48,6 +54,8 @@
         android:layout_below="@+id/etCompose"
         android:layout_marginEnd="1dp"
         android:layout_marginTop="21dp"
+        android:textStyle="bold"
+        android:textSize="16sp"
         android:layout_toStartOf="@+id/tvMaxCount"
         android:text="0" />
 </RelativeLayout>

@@ -53,7 +53,7 @@ public class TimelineActivity extends AppCompatActivity {
         actionBar.setDisplayShowHomeEnabled(true);
         actionBar.setIcon(R.drawable.twitter50);
         getSupportActionBar().setDisplayUseLogoEnabled(true);
-        actionBar.setTitle("  twitter");
+        actionBar.setTitle("  SimpleTweet");
 
         client = TwitterApp.getRestClient(this);
         tweetDao = ((TwitterApp) getApplicationContext()).getMyDatabase().tweetDao();

@@ -1,9 +1,11 @@
 package com.codepath.apps.restclienttemplate;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import okhttp3.Headers;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextWatcher;
@@ -36,6 +38,12 @@ public class ComposeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_compose);
 
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setDisplayShowHomeEnabled(true);
+        actionBar.setIcon(R.drawable.twitter50);
+        getSupportActionBar().setDisplayUseLogoEnabled(true);
+        actionBar.setTitle("  SimpleTweet");
+
         client = TwitterApp.getRestClient(this);
 
         etCompose = findViewById(R.id.etCompose);
@@ -46,9 +54,17 @@ public class ComposeActivity extends AppCompatActivity {
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
                 // Fires right as the text is being changed (even supplies the range of text)
-                int num = etCompose.getText().toString().length();
-                Log.i(TAG, "onTextChanged: " + num);
-                tvCount.setText("" + (int) num);
+                int length = etCompose.getText().toString().length();
+
+                Log.i(TAG, "onTextChanged: " + length);
+
+                tvCount.setText("" + (int) length);
+
+                if (length == 280) {
+                    tvCount.setTextColor(Color.RED);
+                } else {
+                    tvCount.setTextColor(Color.GRAY);
+                }
             }
 
             @Override
