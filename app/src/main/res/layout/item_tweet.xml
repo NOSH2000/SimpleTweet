@@ -28,8 +28,8 @@
             android:layout_height="20dp"
             android:layout_alignParentStart="true"
             android:layout_below="@+id/tvBody"
-            android:layout_marginStart="185dp"
-            android:layout_marginTop="14dp"
+            android:layout_marginStart="156dp"
+            android:layout_marginTop="8dp"
             app:srcCompat="@drawable/ic_vector_retweet_stroke" />
 
         <ImageView
@@ -39,8 +39,8 @@
             android:layout_alignParentStart="true"
             android:layout_below="@+id/tvBody"
             android:layout_marginEnd="85dp"
-            android:layout_marginStart="76dp"
-            android:layout_marginTop="12dp"
+            android:layout_marginStart="56dp"
+            android:layout_marginTop="10dp"
             android:layout_toEndOf="@+id/ivRetweet"
             app:srcCompat="@drawable/reply_icon" />
 
@@ -51,8 +51,8 @@
             android:layout_below="@+id/tvBody"
             android:layout_marginBottom="2dp"
             android:layout_marginEnd="-151dp"
-            android:layout_marginStart="98dp"
-            android:layout_marginTop="11dp"
+            android:layout_marginStart="75dp"
+            android:layout_marginTop="10dp"
             android:layout_toEndOf="@+id/ivRetweet"
             app:srcCompat="@drawable/ic_vector_heart_stroke" />
 
@@ -109,6 +109,17 @@
             android:layout_marginTop="0dp"
             android:layout_toEndOf="@+id/tvDot"
             tools:text="5hr" />
+
+        <ImageView
+            android:id="@+id/imageView4"
+            android:layout_width="21dp"
+            android:layout_height="21dp"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/tvBody"
+            android:layout_marginEnd="22dp"
+            android:layout_marginTop="10dp"
+            app:srcCompat="?attr/actionModeShareDrawable" />
+
 
     </RelativeLayout>
 

@@ -30,6 +30,7 @@ public class ComposeActivity extends AppCompatActivity {
     EditText etCompose;
     Button btnTweet;
     TextView tvCount;
+    TextView tvMaxCount;
 
     TwitterClient client;
 
@@ -49,6 +50,7 @@ public class ComposeActivity extends AppCompatActivity {
         etCompose = findViewById(R.id.etCompose);
         btnTweet = findViewById(R.id.btnTweet);
         tvCount = findViewById(R.id.tvCount);
+        tvMaxCount = findViewById(R.id.tvMaxCount);
 
         etCompose.addTextChangedListener(new TextWatcher() {
             @Override
@@ -62,8 +64,10 @@ public class ComposeActivity extends AppCompatActivity {
 
                 if (length == 280) {
                     tvCount.setTextColor(Color.RED);
+                    tvMaxCount.setTextColor(Color.RED);
                 } else {
                     tvCount.setTextColor(Color.GRAY);
+                    tvMaxCount.setTextColor(Color.GRAY);
                 }
             }
 
@@ -93,7 +97,7 @@ public class ComposeActivity extends AppCompatActivity {
                     Toast.makeText(ComposeActivity.this, "Sorry, your tweet is too long", Toast.LENGTH_LONG).show();
                     return;
                 }
-                Toast.makeText(ComposeActivity.this, tweetContent, Toast.LENGTH_LONG).show();
+//                Toast.makeText(ComposeActivity.this, tweetContent, Toast.LENGTH_LONG).show();
 
                 // Make an API call to the twitter to publish the tweet
                 client.publishTweet(tweetContent, new JsonHttpResponseHandler() {
